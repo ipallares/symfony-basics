@@ -29,6 +29,11 @@ class Todo
     #[ORM\Column]
     private ?bool $isFinished = null;
 
+    public function __construct()
+    {
+        $this->creationDate = new \DateTime();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -61,13 +66,6 @@ class Todo
     public function getCreationDate(): ?\DateTimeInterface
     {
         return $this->creationDate;
-    }
-
-    public function setCreationDate(\DateTimeInterface $creationDate): self
-    {
-        $this->creationDate = $creationDate;
-
-        return $this;
     }
 
     public function getDueDate(): ?\DateTimeInterface
