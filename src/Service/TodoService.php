@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Service;
 
 use App\Entity\Todo;
-use App\Interface\Repository\TodoServiceInterface;
+use App\Interface\Service\TodoServiceInterface;
 use App\Repository\TodoRepository;
 
 class TodoService implements TodoServiceInterface

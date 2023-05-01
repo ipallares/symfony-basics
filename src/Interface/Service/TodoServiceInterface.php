@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Interface\Repository;
+namespace App\Interface\Service;
 
 use App\Entity\Todo;
 
