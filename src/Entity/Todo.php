@@ -80,7 +80,7 @@ class Todo
         return $this;
     }
 
-    public function isIsFinished(): ?bool
+    public function isFinished(): ?bool
     {
         return $this->isFinished;
     }
