@@ -9,12 +9,16 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1>TODO List ✅</h1>
 
-    This friendly message is coming from:
     <ul>
-        <li>Your controller at <code><a href="{{ '/Users/ipallares/Data/tech/projects/symfony-basics/src/Controller/TodoController.php'|file_link(0) }}">src/Controller/TodoController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Users/ipallares/Data/tech/projects/symfony-basics/templates/todo/index.html.twig'|file_link(0) }}">templates/todo/index.html.twig</a></code></li>
+        {% for todo in todoList %}
+            {% if todo.isFinished %}
+                <li style="color:green">{{ todo.name }}</li>
+            {% else %}
+                <li style="color:red">{{ todo.name }}</li>
+            {% endif %}
+        {% endfor %}
     </ul>
 </div>
 {% endblock %}
