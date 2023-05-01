@@ -2,8 +2,7 @@
 
 namespace App\Controller;
 
-use App\Repository\TodoRepository;
-use App\Service\TodoService;
+use App\Interface\Repository\TodoServiceInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -11,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class TodoController extends AbstractController
 {
     #[Route('/todo', name: 'app_todo', methods: ['GET'])]
-    public function index(TodoService $todoService): Response
+    public function index(TodoServiceInterface $todoService): Response
     {
         $todoList = $todoService->findAll();
 

@@ -4,15 +4,20 @@ declare(strict_types=1);
 
 namespace App\Service;
 
+use App\Entity\Todo;
+use App\Interface\Repository\TodoServiceInterface;
 use App\Repository\TodoRepository;
 
-class TodoService
+class TodoService implements TodoServiceInterface
 {
     public function __construct(
-        private TodoRepository $todoRepository
+        private readonly TodoRepository $todoRepository
     ){
     }
 
+    /**
+     * @return Todo[]
+     */
     public function findAll(): array
     {
         return $this->todoRepository->findAll();
