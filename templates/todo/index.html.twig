@@ -13,11 +13,8 @@
 
     <ul>
         {% for todo in todoList %}
-            {% if todo.isFinished %}
-                <li style="color:green">{{ todo.name }}</li>
-            {% else %}
-                <li style="color:red">{{ todo.name }}</li>
-            {% endif %}
+            {% set color = todo.isFinished ? 'green' : 'red' %}
+            <li style="color:{{ color }}">{{ todo.name }}</li>
         {% endfor %}
     </ul>
 </div>
