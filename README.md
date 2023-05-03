@@ -125,4 +125,8 @@ Thinks to keep in mind:
 
 ## Configurations
 
-tbd
+We can work with environment variables in our .env files. The naming convention for such files and their application is `.env[.{environment}][.local]`. If {environment} is empty we work with production environment, otherwise we have by default `dev` and `test` environments. In the `.local` files we store the secrets of the given environment (see official [docu](https://symfony.com/doc/current/configuration.html#configuration-environments)).
+
+We also work with configuration parameters, which also allow us to distinguish environments (by using `_{env}` suffix). The main configuration file is `services.yaml` where, apart from our services we can define configuration parameters and bind them to parameters that we can inject to our methods (all about Symfony configurations [here](https://symfony.com/doc/current/configuration.html) ).
+
+Check  [this commit](https://github.com/ipallares/symfony-basics/commit/eaf52be884d2d9969246f080fc5bac08fce0f285) to see it all in practice. 
