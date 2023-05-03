@@ -2,7 +2,7 @@
 
 Just a demo project to show Symfony basic features.
 
-## Installation
+## Brand new Symfony Project Installation
 * Install Symfony cli:
   `brew install symfony-cli/tap/symfony-cli`
     * Reference: 	https://symfony.com/download
@@ -20,6 +20,11 @@ Just a demo project to show Symfony basic features.
       (The only difference is the packages which are installed by default)
 
     * Reference: https://symfony.com/doc/current/setup.html
+
+## Installation of this project
+1. Clone the repo
+2. Install dependencies
+    `composer install`
 
 ## Create a first Controller:
 
