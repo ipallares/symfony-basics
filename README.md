@@ -77,7 +77,7 @@ Now we need to run the migration so our DB gets updated with the table for the `
 
 `$)symfony console doctrine:migrations:migrate`
 
-Code generated in this step can be seen [here](https://github.com/ipallares/symfony-basics/commit/6d2058fe350257dc17ca48fe8f97873d50130d8e)
+Code generated in this step can be seen [here](https://github.com/ipallares/symfony-basics/commit/9d79d10ab02fb02b46de2b04b873876009564be0)
 
 ## Use Doctrine Repository and show it in Frontend
 
