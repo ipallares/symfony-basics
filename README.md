@@ -15,7 +15,7 @@ Just a demo project to show Symfony basic features.
       `symfony new {project-name} --webapp`
 
     * For commands, APIs, microservices:
-      `symfony new my_project_directory`
+      `symfony new {project-name}`
 
       (The only difference is the packages which are installed by default)
 
@@ -25,6 +25,8 @@ Just a demo project to show Symfony basic features.
 1. Clone the repo
 2. Install dependencies
     `composer install`
+3. Start Symfony Server
+    `symfony serve`
 
 ## Create a first Controller:
 
