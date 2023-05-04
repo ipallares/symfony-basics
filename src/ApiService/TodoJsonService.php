@@ -26,7 +26,7 @@ class TodoJsonService
         $todoList = $this->todoService->findAll();
 
         $this->logger->info('ApiUrl: {apiUrl}', ['apiUrl' => $this->apiUrl]);
-        $this->logger->info('ApiUser: {apiUser}', ['apiUrl' => $this->apiUser]);
+        $this->logger->info('ApiUser: {apiUser}', ['apiUser' => $this->apiUser]);
         $this->logger->info('ApiSecret: {apiSecret}', ['apiSecret' => $this->apiSecret]);
 
         return $this->serializer->serialize($todoList, 'json', ['json_encode_options' => JsonResponse::DEFAULT_ENCODING_OPTIONS,]);
