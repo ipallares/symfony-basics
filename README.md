@@ -91,8 +91,10 @@ In our particular example there is no business logic involved, but still we wann
 Changes can be seen [here](https://github.com/ipallares/symfony-basics/commit/887de9efa5a167e80eae4e55dbbcf49cd0e7a2ce).
 
 ## Dependency Inversion
-As stated by the `D` in the `SOLID` Principles, we wanna depend on abstractions and not implementations (to be use with caution and common sense :) ). This principle is aimed at decoupling our code and make maintenance easier.
-In our code we give a new implementation for the `TodoService` class, called `TodoCustomService` which basically gives a hardcoded list of Todos (so it is just for the purpose of showing its use and how Symfony helps there). Code can be seen [here](https://github.com/ipallares/symfony-basics/commit/b7335d531a08fefc6146cefd043e98271e33f142).
+As stated by the `D` in the `SOLID` Principles, we wanna depend on abstractions and not implementations (to be use with caution and common sense :) ). This principle is aimed at decoupling our code and make maintenance easier. In [this commit](https://github.com/ipallares/symfony-basics/commit/1efad39fde92d49ddf4e47cc59ff6b0da1bb7c1b) can be seen, how we inject an interface `TodoServiceInterface` instead of the `TodoService` class.
+
+## Adding a new implementation for the Interface (Strategy Pattern)
+Now we give a new implementation for the `TodoService` class, called `TodoCustomService` which basically gives a hardcoded list of Todos (so it is just for the purpose of showing its use and how Symfony helps there). Code can be seen [here](https://github.com/ipallares/symfony-basics/commit/b7335d531a08fefc6146cefd043e98271e33f142). We show also how to configure the service in the `services.yaml` file to tell the system which implementation (strategy) to use.
 
 In a more realistic scenario we can think of an interface `UserProviderInterface`. Some of our customers will tell us to get the users from a DB, some others will give as a Rest API Endpoint, some others an LDAP Server, Keycloak... All we need to do is use UserProviderInterface as parameter Type in our methods and implement the classes for the different use case. The for every client we will configure the proper implementation to be used (see [how we configure it](https://github.com/ipallares/symfony-basics/commit/b7335d531a08fefc6146cefd043e98271e33f142#diff-c47b03734cd2b4337b345eeba955637ba790d51fd98979f6d366d4acbdb104e0R15))
 
